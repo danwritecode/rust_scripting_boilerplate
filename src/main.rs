@@ -13,7 +13,7 @@ pub struct UpdateStruct {
     pub foo: String,
 }
 
-async fn update_fw_deal_fill_number(id: &i64) -> Result<(), reqwest::Error> {
+async fn update_function(id: &i64) -> Result<(), reqwest::Error> {
     let update = UpdateStruct {
         foo: "foo".to_string()
     };
@@ -39,7 +39,7 @@ pub struct ResponseStruct {
     pub foo: String,
 }
 
-async fn get_day_supply(id: &i64) -> Result<(), reqwest::Error> {
+async fn get_function(id: &i64) -> Result<(), reqwest::Error> {
     let url = format!("{}", id);
     let mut headers = header::HeaderMap::new();
     headers.insert(AUTHORIZATION, format!("").parse().unwrap());
